@@ -16,10 +16,12 @@ add_library(DynamicLib SHARED Laughter.hpp Laughter.cpp)
 
 set_target_properties(DynamicLib PROPERTIES PUBLIC_HEADER Laughter.hpp)
 
+
 install(TARGETS DynamicLib
 		PUBLIC_HEADER DESTINATION ${CMAKE_SOURCE_DIR}/DynamicLib/include
-		ARCHIVE DESTINATION ${CMAKE_SOURCE_DIR}/DynamicLib/lib
 		RUNTIME DESTINATION ${CMAKE_SOURCE_DIR}/DynamicLib/lib)
+
+add_definitions(-DBUILD_DLL)
 
 add_library(StaticLib STATIC Laughter.cpp Laughter.hpp)
 

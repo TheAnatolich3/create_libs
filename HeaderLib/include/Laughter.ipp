@@ -5,7 +5,7 @@
 
 #include <cstdio>
 
-void laughter() {
+inline void laughter() {
 	printf("Ha-ha-ha");
 }
 // TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
